@@ -47,9 +47,7 @@ function App() {
         ))}
       </main>
       <p className="footer font-small">
-        ♡<br />
-        Faça seu pedido através do <br />
-        WhatsApp (99) 99999-9999
+        <br />
       </p>
     </div>
   );
