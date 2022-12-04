@@ -1,4 +1,5 @@
 import "./App.sass";
+import { coffees } from "./utils/products";
 
 function App() {
   return (
@@ -12,33 +13,20 @@ function App() {
 
         <section className="section-title">Cafés</section>
 
-        <section className="section-item">
-          <div className="text-left">
-            <span className="">Cappuccino</span>
-            <br />
-            <span className="font-small light-color">
-              Pellentesque habitant morbi tristique senectus et netus et
-              malesuada fames ac turpis egestas
-            </span>
-          </div>
-          <div className="text-right">
-            <span className="">R$ 8,00</span>
-          </div>
-        </section>
-
-        <section className="section-item">
-          <div className="text-left">
-            <span className="">Café Expresso</span>
-            <br />
-            <span className="font-small light-color">
-              Pellentesque habitant morbi tristique senectus et netus et
-              malesuada fames ac turpis egestas
-            </span>
-          </div>
-          <div className="text-right">
-            <span className="">R$ 8,00</span>
-          </div>
-        </section>
+        {coffees.map((coffee) => (
+          <section className="section-item">
+            <div className="text-left">
+              <span className="">{coffee.name}</span>
+              <br />
+              <span className="font-small light-color">
+                {coffee.description}
+              </span>
+            </div>
+            <div className="text-right">
+              <span className="">R$ {coffee.price}</span>
+            </div>
+          </section>
+        ))}
 
         <section className="section-title">Lanches</section>
 
